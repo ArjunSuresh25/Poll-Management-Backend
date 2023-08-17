@@ -1,0 +1,3 @@
+DELETE FROM "Poll_Votes";
+DELETE FROM "Polls";
+DELETE FROM "Users";

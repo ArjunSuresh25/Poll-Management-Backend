@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "f6f403b0-4d65-410c-a5d0-b0b218716dd2",
+		"name": "Polls Management Dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authenticated",
+			"item": [
+				{
+					"name": "Create Poll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"question\": \"Sample question\",\n    \"options\": [\"Option 1\", \"Option 2\", \"Option 3\"],\n    \"start_time\": 1670749587997,\n    \"end_time\": 1670749687997\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/polls/create",
+							"path": [
+								"polls",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Poll",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "/polls/ed4hmy_",
+							"path": [
+								"polls",
+								"ed4hmy_"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Polls",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/polls/",
+							"path": [
+								"polls",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InR2ZTIwY3MwMDdAY2V0LmFjLmluIiwiaWF0IjoxNjcwNzUwMjg4LCJleHAiOjE2NzA3NTIwODh9.FkrV1PbS7QWjpTn37PG3WKBBB8LF1TS0czqD-Q_bkJ8",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Verify User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"tve20cs007@cet.ac.in\",\n    \"verified\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/admin/verify-user",
+							"path": [
+								"admin",
+								"verify-user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjcwNzQ5MzI0LCJleHAiOjE3MDIzMDY5MjR9.0jjegPwDvwYd2Lu6U1g-b0H8Wn5xDsbCVPjNIp5thh0",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"tve20cs007@cet.ac.in\",\n    \"password\": \"12345678\",\n    \"name\": \"Adarsh Menon\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "/signup",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"tve20cs007@cet.ac.in\",\n    \"password\": \"12345678_strong_pa$$word\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "/signin",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Poll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "/polls/znicsnx",
+					"path": [
+						"polls",
+						"znicsnx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "/votes/dmr1pdp/0",
+					"path": [
+						"votes",
+						"dmr1pdp",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Poll Votes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "/votes/znicsnx",
+					"path": [
+						"votes",
+						"znicsnx"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.url = pm.variables.get('baseUrl') + pm.request.url"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://poll.adarshmenon.dev",
+			"type": "default",
+			"disabled": true
+		},
+		{
+			"key": "baseUrl",
+			"value": "localhost:3001",
+			"type": "default"
+		}
+	]
+}
